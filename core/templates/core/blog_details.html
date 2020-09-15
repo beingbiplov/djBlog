@@ -1,0 +1,33 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %} Details {% endblock %}
+
+{% block content %}
+	
+	<div class="container">
+		<section class="details">
+			<div class="thumbnail">
+				<img src="{{ post.thumbnail.url }}">
+			</div>
+			<div class="blog mt-4 mb-4">
+				<h2 class="mb-0">
+					<a href="#">
+						{{ post.title }}
+					</a>
+				</h2>
+				<div class="text-muted mb-3">
+					{{ post.createdAt }}
+				</div>
+				<div class="mb-4">
+					<a type="button" class="btn-sm btn-secondary" href="#">Edit</a>
+					<a type='button' class="btn-sm btn-danger" href="#">Delete</a>
+				</div>
+				<div class="blogContent">
+					<p>{{ post.content }}</p>
+				</div>
+			</div>
+		</section>
+	</div>
+
+{% endblock %}

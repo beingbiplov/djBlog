@@ -46,3 +46,12 @@ body{
 .description p {
 	font-size: 1.4rem;
 }
+
+.details {
+	padding: 0 15% 0 15%;
+}
+
+.blogContent {
+	margin-top: 2.5em;
+	font-size: 1.4rem; 
+}
