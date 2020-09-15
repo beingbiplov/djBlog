@@ -55,3 +55,13 @@ body{
 	margin-top: 2.5em;
 	font-size: 1.4rem; 
 }
+
+.delete-confirm {
+	margin-top: 15vh;
+	text-align: center;
+}
+
+.deleteHead{
+	font-weight: bold;
+	color: red;
+}

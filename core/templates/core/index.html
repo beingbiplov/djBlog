@@ -35,7 +35,7 @@
 					<div class="buttons">
 						<a type="button" class='btn btn-primary' href="{% url 'details' post.pk %}">Read More</a>
 						<a type='button' class="btn btn-info" href="#">Edit</a>
-						<a type="button" class="btn btn-danger" href="#">Delete</a>
+						<a type="button" class="btn btn-danger" href="{% url 'delete' post.pk %}">Delete</a>
 					</div>
 				</div>
 			{% endfor %}

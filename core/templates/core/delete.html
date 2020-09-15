@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %} Delete {% endblock %}
+
+{% block content %}
+	
+	<div class="container">
+		<section class="delete-confirm">
+			<form method="POST">
+				{% csrf_token %}
+	        <fieldset class="form-group">
+	          <h1 class="deleteHead">Delete Post</h1>
+	              <h2> Are you sure you want to delete "{{ post.title }}"
+	        </fieldset>
+	        <div class="form-group">
+	          <button class="btn btn-danger" type="submit">Delete</button>
+	          <a class="btn btn-secondary" href="{% url 'details' post.pk %}">Cancel</a>
+	        </div>
+				
+			</form>
+		</section>
+	</div>
+
+{% endblock %}

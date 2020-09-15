@@ -21,7 +21,7 @@
 				</div>
 				<div class="mb-4">
 					<a type="button" class="btn-sm btn-secondary" href="#">Edit</a>
-					<a type='button' class="btn-sm btn-danger" href="#">Delete</a>
+					<a type='button' class="btn-sm btn-danger" href="{% url 'delete' post.pk %}">Delete</a>
 				</div>
 				<div class="blogContent">
 					<p>{{ post.content }}</p>
