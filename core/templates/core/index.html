@@ -1,9 +1,46 @@
 {% extends 'core/base.html' %}
+{% load static %}
 
 {% block title %} Home {% endblock %}
 
 {% block content %}
 	
-	<h1>Hello World!</h1>
+	<div class="container">
+		<section class="heading mt-2 mb-4">
+			<h1>All Blog Posts</h1>
+		</section>
+
+		<a type="button" class="btn btn-secondary mb-4" >Add New Post</a>
+
+	</div>
+
+	<div class="container">
+		<section class="content">
+			{% for post in posts %}
+				<div class="blog mt-4 mb-4">
+					<h2 class="mb-0">
+						<a href="#">
+							{{ post.title }}
+						</a>
+					</h2>
+					<div class="text-muted mb-3">
+						{{ post.createdAt }}
+					</div>
+					<div class="thumbnail mb-2">
+						<img src="{% static 'core/images/placeholder.jpg' %}">
+					</div>
+					<div class="description">
+						<p>{{ post.description }}</p>
+					</div>
+					<div class="buttons">
+						<a type="button" class='btn btn-primary' href="#">Read More</a>
+						<a type='button' class="btn btn-info" href="#">Edit</a>
+						<a type="button" class="btn btn-danger" href="#">Delete</a>
+					</div>
+				</div>
+			{% endfor %}
+		</section>
+		
+	</div>
 
 {% endblock %}
