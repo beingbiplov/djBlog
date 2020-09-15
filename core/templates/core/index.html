@@ -27,7 +27,7 @@
 						{{ post.createdAt }}
 					</div>
 					<div class="thumbnail mb-2">
-						<img src="{% static 'core/images/placeholder.jpg' %}">
+						<img src="{{ post.thumbnail.url }}">
 					</div>
 					<div class="description">
 						<p>{{ post.description }}</p>
