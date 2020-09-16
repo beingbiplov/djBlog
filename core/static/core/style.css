@@ -65,3 +65,26 @@ body{
 	font-weight: bold;
 	color: red;
 }
+
+.form-section h2 {
+	font-weight: bold;
+	font-size: 3rem;
+	color: #114d4d;
+	text-decoration: none;
+	margin-bottom: 2rem;
+}
+
+.form-method label {
+	font-weight: normal;
+	font-size: 1.3rem;
+}
+
+.form-method input {
+	width: 29em;
+	height: 2.7em;
+}
+
+.form-method textarea {
+	width: 29em;
+	height: 7em;
+}

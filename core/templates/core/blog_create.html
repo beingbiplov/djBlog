@@ -1,0 +1,37 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Add New Blog {% endblock %}
+
+{% block content %}
+	
+	<div class="container">
+		<section class="form-section">
+			<h2>Add New Blog Post</h2>
+			<form method='POST' class="form-method" >
+				{% csrf_token %}
+				<label for='{{ form.title }}'>Title</label>
+				<p>
+					{{ form.title }}
+				</p>
+				<label for='{{ form.description }}'>Description</label>
+				<p>
+					{{ form.description }}
+				</p>
+				<label for='{{ form.content }}'>Content</label>
+				<p>
+					{{ form.content }}
+				</p>
+				<label for='{{ form.thumbnail }}'>Thumbnail</label>
+				<p>
+					{{ form.thumbnail }}
+				</p>
+				<div class="buttons">
+					<button type='submit' class="btn btn-primary">Save</button>
+					<a type='button' class="btn btn-secondary" href="{% url 'index' %}">Cancel</a>
+				</div>
+			</form>
+		</section>
+	</div>
+
+{% endblock %}
