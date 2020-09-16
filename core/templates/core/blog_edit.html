@@ -1,13 +1,13 @@
 {% extends 'core/base.html' %}
 {% load static %}
 
-{% block title %}Edit Blog {% endblock %}
+{% block title %}Update Blog Post {% endblock %}
 
 {% block content %}
 	
 	<div class="container">
 		<section class="form-section">
-			<h2>Edit</h2>
+			<h2>Update : {{ form.title.value }}</h2>
 			<form method='POST' class="form-method" >
 				{% csrf_token %}
 				<label for='{{ form.title }}'>Title</label>
