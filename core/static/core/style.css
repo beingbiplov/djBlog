@@ -88,3 +88,30 @@ body{
 	width: 29em;
 	height: 7em;
 }
+
+@media (max-width: 768px) {
+
+	.content {
+		max-width: 95%;
+	}
+	.thumbnail img {
+		height: 15em;
+		width: 100%;
+	}
+
+	.form-method input {
+		width: 80%;
+		height: 2.7em;
+	}
+
+	.form-method textarea {
+		width: 80%;
+		height: 7em;
+	}
+}
+
+@media (max-width: 991px) {
+	.details {
+		padding: 2% 0 2%;
+	}	
+}
