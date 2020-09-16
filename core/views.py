@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Blog
-from django.views.generic import ListView, DetailView, DeleteView, CreateView
+from django.views.generic import ListView, DetailView, DeleteView, CreateView, UpdateView
 
 class indexListView(ListView):
 	model = Blog
@@ -23,4 +23,15 @@ class blogCreateView(CreateView):
 	model = Blog
 	fields = ['title', 'description', 'content', 'thumbnail']
 	template_name = 'core/blog_create.html'
-	success_url = '/'
+
+class blogUpdateView(UpdateView):
+	model = Blog
+	template_name = 'core/blog_edit.html'
+	fields = ['title', 'description', 'content', 'thumbnail']
+
+	def get_context_data(self, **kwargs):
+		context = super().get_context_data(**kwargs)
+		blog_pk = self.kwargs['pk']
+		context['blog_pk'] = blog_pk
+
+		return context
