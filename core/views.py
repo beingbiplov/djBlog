@@ -7,6 +7,7 @@ class indexListView(ListView):
 	template_name = 'core/index.html'
 	context_object_name= 'posts'
 	ordering = ['-createdAt']
+	paginate_by = 5
 
 class blogDetailView(DetailView):
 	model = Blog

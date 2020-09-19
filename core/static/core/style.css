@@ -115,3 +115,12 @@ body{
 		padding: 2% 0 2%;
 	}	
 }
+
+.pagination {
+	justify-content: center;
+
+}
+
+.pagination a {
+	margin-left: 1em;
+}
