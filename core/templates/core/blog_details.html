@@ -24,7 +24,9 @@
 					<a type='button' class="btn-sm btn-danger" href="{% url 'delete' post.pk %}">Delete</a>
 				</div>
 				<div class="blogContent">
-					<p>{{ post.content }}</p>
+					{% autoescape off %}
+						{{ post.content_html }}
+					{% endautoescape %}
 				</div>
 			</div>
 		</section>
